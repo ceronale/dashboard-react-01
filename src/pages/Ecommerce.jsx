@@ -69,7 +69,7 @@ const Ecommerce = () => {
             <div className="mt-8">
               <p className="text-3xl font-semibold">$48,487</p>
 
-              <p className="text-gray-500 mt-1">Expense</p>
+              <p className="text-gray-500 mt-1">Expensee</p>
             </div>
 
             <div className="mt-5">
