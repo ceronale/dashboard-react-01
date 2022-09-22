@@ -16,7 +16,7 @@ export const ContextProvider = ({ children }) => {
     const [currentColor, setcurrentColor] = useState('#03C9D7')
     const [currentMode, setcurrentMode] = useState('Light');
     const [themeSettings, setThemeSettings] = useState(false)
-
+    const [navActive, setNavActive] = useState('');
     const setMode = (e) => {
         setcurrentMode(e.target.value);
         localStorage.setItem('themeMode', e.target.value);
@@ -31,7 +31,14 @@ export const ContextProvider = ({ children }) => {
     }
 
     const handleClick = (clicked) => {
+       if (navActive == clicked){
+        setIsClicked({ ...initialState, [clicked]: false });
+        setNavActive('')
+       }else{
         setIsClicked({ ...initialState, [clicked]: true });
+        setNavActive(clicked)
+       }
+        
     }
 
     return (
